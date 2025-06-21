@@ -21,20 +21,24 @@
             margin-top: 40px;
         }
 
-        p {
+        p.subheadline {
             font-size: 1.8em;
-            margin: 20px auto;
+            margin: 20px auto 10px auto;
             max-width: 700px;
+        }
+
+        .video-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 10px auto 10px auto;
         }
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 60%;
-            margin: 20px auto;
-            border-radius: 8px;
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            aspect-ratio: 16 / 9;
         }
 
         .video-container iframe {
@@ -42,17 +46,17 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 555px;
+            height: 100%;
         }
 
         .btn-play {
             display: inline-block;
-            margin-top: 2px;
-            padding: 15px 30px;
+            margin-top: 8px;
+            padding: 12px 25px;
             background-color: #28a745;
             color: white;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
             border-radius: 6px;
             transition: background 0.3s;
@@ -62,28 +66,57 @@
             background-color: #218838;
         }
 
+        .yellow-box {
+            background-color: yellow;
+            color: black;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 12px;
+            text-align: left;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            box-sizing: border-box;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
             }
-            p {
+
+            p.subheadline {
                 font-size: 1em;
+                margin: 15px 10px;
+            }
+
+            .video-container {
+                max-width: 415px;
+                aspect-ratio: 16 / 9;
+            }
+
+            .yellow-box {
+                margin: 20px;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <h1>Holding NÃO Funciona Mais.</h1>
 
-    <p>"Descubra O Passo A Passo Para Planejar Sua Sucessão E Proteger Seus Bens, Construindo Uma Fortaleza Jurídica, Antes Da Reforma Tributária Entrar Em Vigor."</p>
+    <p class="subheadline">"Descubra O Passo A Passo Para Planejar Sua Sucessão E Proteger Seus Bens, Construindo Uma Fortaleza Jurídica, Antes Da Reforma Tributária Entrar Em Vigor."</p>
 
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/lq3TRJmJHDg?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    <div class="video-wrapper">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lq3TRJmJHDg?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
     <a href="https://www.youtube.com/watch?v=lq3TRJmJHDg" target="_blank" class="btn-play">Clique para ouvir</a>
+
+    <div class="yellow-box">
+        Aqui vai o seu texto explicativo grande. Pode escrever o quanto quiser aqui. O texto ficará sempre centralizado, com margem de 20px em cada lado, fundo amarelo e a fonte preta com 12px, mantendo o espaçamento interno (padding) para leitura confortável tanto no desktop quanto no mobile.
+    </div>
 
 </body>
 </html>
